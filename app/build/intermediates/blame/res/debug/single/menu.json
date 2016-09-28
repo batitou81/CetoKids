@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_mes_aliments.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\menu_mes_aliments.xml"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_ajout_aliment.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\menu_ajout_aliment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_mes_repas.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\menu_mes_repas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_mes_recettes.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\menu_mes_recettes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_detail_recette.xml",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\menu\\menu_detail_recette.xml"
+    }
+]

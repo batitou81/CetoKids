@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.baptiste.cetokids.ListeAlimentActivity">
+    <!--<item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Ajouter un aliment dans la base de données."
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_sauvegarde"
+        android:orderInCategory="200"
+        android:title="@string/sauvegarder"
+        android:icon="@drawable/check_sauvegarde_recette"
+        app:showAsAction="always"
+        ></item>
+</menu>

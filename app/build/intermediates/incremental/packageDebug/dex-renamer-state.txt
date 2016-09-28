@@ -1,0 +1,7 @@
+#Wed Sep 28 21:50:45 CEST 2016
+base.0=C\:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_cf96b338e373fd3e321214f242bade44a70ce0f2
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_034c8edc4290224f5ed9e56330c114a277868baf\\classes.dex
+base.1=C\:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_034c8edc4290224f5ed9e56330c114a277868baf
+file.0=C\:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_cf96b338e373fd3e321214f242bade44a70ce0f2\\classes.dex

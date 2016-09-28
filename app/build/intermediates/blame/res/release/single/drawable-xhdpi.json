@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\check_sauvegarde_recette_vide.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\drawable-xhdpi\\check_sauvegarde_recette_vide.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\check_sauvegarde_recette.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\drawable-xhdpi\\check_sauvegarde_recette.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi\\ic_action_name.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
+    }
+]

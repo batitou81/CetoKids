@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <item android:title="">
+        <menu>
+            <!--
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/calculRecette"
+                    android:orderInCategory="100"
+                    android:title="@string/calcul_recette"
+                    app:showAsAction="never" />
+
+            </group>-->
+            <!---->
+            <item
+                android:id="@+id/mesRepas"
+                android:orderInCategory="100"
+                android:title="@string/mes_objectifs"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/mesRecettes"
+                android:orderInCategory="100"
+                android:title="@string/mes_recettes"
+                app:showAsAction="never" />
+            <item
+            android:id="@+id/mesAliments"
+            android:orderInCategory="100"
+            android:title="@string/mes_alimdnts"
+            app:showAsAction="never" />
+        </menu>
+    </item>
+</menu>

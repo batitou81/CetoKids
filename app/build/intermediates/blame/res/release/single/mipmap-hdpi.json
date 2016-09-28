@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\check_recette.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\check_recette.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\sauvegarder_recette.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\sauvegarder_recette.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\logo_drawer.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\logo_drawer.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\ajout_repas_menu.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\ajout_repas_menu.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\logo_cetokids.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\logo_cetokids.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\icone_application.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\icone_application.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\editer_recette.png",
+        "source": "C:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\src\\main\\res\\mipmap-hdpi\\editer_recette.png"
+    }
+]

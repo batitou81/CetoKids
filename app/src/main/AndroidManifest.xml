@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.baptiste.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icone_application"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.baptiste.cetokids.view.MainScreenActivity"></activity>
+        <activity android:name="com.baptiste.cetokids.view.MainActivity" />
+        <activity android:name="com.baptiste.cetokids.view.ListeAlimentActivity" />
+        <activity
+            android:name="com.baptiste.cetokids.view.AjoutAlimentActivity"
+            android:label="@string/title_activity_ajout_aliment" />
+        <activity
+            android:name="com.baptiste.cetokids.view.RecetteActivity"
+            android:configChanges="orientation|screenSize|keyboard" />
+        <activity android:name="com.baptiste.cetokids.view.RepasActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.baptiste.cetokids.view.MesRecettesActivity" />
+        <activity android:name="com.baptiste.cetokids.view.DetailRecetteAtivity" />
+        <activity android:name="com.baptiste.cetokids.view.MesAlimentsActivity"></activity>
+    </application>
+
+</manifest>

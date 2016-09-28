@@ -1,0 +1,76 @@
+<resources>
+    <!-- DEBUT LAYOUT -->
+    <string name="app_name">CetoKids</string>
+    <string name="title_activity_ajout_aliment">AjoutAliment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="repas">Repas</string>
+    <string name="proteine">Proteine</string>
+    <string name="lipide">Lipide</string>
+    <string name="glucide">Glucide</string>
+    <string name="proteine_g">Proteine (g)</string>
+    <string name="lipide_g">Lipide (g)</string>
+    <string name="glucide_g">Glucide (g)</string>
+    <string name="kcal">Kcal</string>
+    <string name="ratio">Ratio</string>
+    <string name="pour_100g">Pour 100g</string>
+    <string name="recette">Recette</string>
+    <string name="aliment">Aliment</string>
+    <string name="nom_repas">Nom du repas</string>
+    <string name="ratio_regime">Ratio du régime   </string>
+    <string name="cetokids">CetoKids</string>
+    <string name="ajout_aliment">Ajouter un aliment</string>
+    <string name="objetif">Objectif :</string>
+    <string name="lip">Lip</string>
+    <string name="prot">Prot</string>
+    <string name="glu">Glu</string>
+    <string name="recette_enregistre">Recettes enregistrées</string>
+    <string name="page_accueil">PAGE ACCUEIL APPLICATION</string>
+    <string name="charger_objectif_ou_renseignez_valeurs">Charger un objectif pour un repas, ou renseignez les valeurs.</string>
+    <string name="charger_objectif">Charger un objectif...</string>
+    <string name="charger">Charger</string>
+    <string name="suivant">Suivant</string>
+    <string name="categorie">Categorie</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="liste_repas">Liste des repas et leurs objectifs</string>
+    <string name="calcul_recette">Calcul de recettes</string>
+    <string name="mes_recettes">Mes recettes</string>
+    <string name="mes_objectifs">Mes objectifs</string>
+    <string name="ajout_repas">Ajout Repas</string>
+    <string name="detail_recette">Detail de la recette</string>
+    <string name="mes_repas">Mes Repas</string>
+    <string name="sauvegarder">Sauvegarder</string>
+    <string name="mes_alimdnts">Mes aliments</string>
+    <!-- FIN LAYOUT -->
+    <!-- DEBUT JAVA -->
+    <string name="aliment_supprime">Aliment supprimé </string>
+    <string name="repas_existe_deja">Ce nom est déjà utilisé.</string>
+    <string name="impossible_recette_existe_aliment">Impossible de supprimer cet aliment car il est utilise dans une recette.</string>
+    <string name="valeur_interdite_diese">Valeur interdite : #</string>
+    <string name="element_exite_deja">"Ce nom est déjà utilisé par un autre aliment."</string>
+    <string name="toutes_les_valeurs_a_renseigner">"Toutes les valeurs doivent être renseignées !"</string>
+    <string name="ajoute">Ajouté</string>
+    <string name="quantite_initiale">Quantité initiale</string>
+    <string name="quantite_en_g">Quantité (en G)):</string>
+    <string name="ok">Ok</string>
+    <string name="annuler">Annuler</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="confirmation_suppression_recette">Voulez vous supprimer cette recette ?</string>
+    <string name="supprimee">Supprimée</string>
+    <string name="suppression_element_impossible">Impossible de supprimer l\'element... </string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="confirmation_suppression_repas">Voulez vous supprimer ce repas ?</string>
+    <string name="confirmation_sortie_ecran_recette">Attention !\nSi vous quittez cet écran votre recette sera perdu, voulez vous continuer ?</string>
+    <string name="quitter">Quitter</string>
+    <string name="confirmation_suppression_element">Voulez vous supprimer définitivement cet aliment de l\'application ?</string>
+    <string name="confirmation_retrait_element">Voulez vous retirer cet aliment ?</string>
+    <string name="enregsitrement_impossible">"La recette est vide.\n Ajouter des aliments pour pouvoir l\'enregistrer."</string>
+    <string name="enregistrer_recette">Enregistrer la recette</string>
+    <string name="enregistrement_impossible_existe_deja">"Ce nom est deja utilisé pour une recette. Enregistrement impossible."</string>
+    <string name="enregistrement_impossible_nom_vide">Veuillez donner un nom à votre recette.</string>
+    <string name="mis_a_jour">a été mis à jour.</string>
+    <string name="continue_sans_objectif">Continuer sans objectif</string>
+    <string name="selection_objectif_continuer">Selectionner un objectif pour continuer :</string>
+
+</resources>
