@@ -97,6 +97,20 @@ public class MyListRecetteAdapater extends BaseAdapter implements ListAdapter {
         gluPortionLabel.setText(round(item.getGlucide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
         lipPortionLabel.setText(round(item.getLipide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
         protPortionLabel.setText(round(item.getProteine() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+portionEdit.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+    @Override
+    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+        item.setPortion(picker.getValue());
+
+        portionLabel.setText("Pour " + item.getPortion() + "g");
+        gluPortionLabel.setText(round(item.getGlucide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+        lipPortionLabel.setText(round(item.getLipide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+        protPortionLabel.setText(round(item.getProteine() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+
+        ListRecetteListener listener = MyListRecetteAdapater.this.listenerRef.get();
+        listener.onRecetteChanged();
+    }
+});
 
         portionEdit.setOnScrollListener(new NumberPicker.OnScrollListener() {
 

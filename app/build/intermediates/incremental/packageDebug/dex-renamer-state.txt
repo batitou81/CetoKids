@@ -1,4 +1,4 @@
-#Wed Sep 28 21:50:45 CEST 2016
+#Thu Sep 29 19:33:11 CEST 2016
 base.0=C\:\\Users\\Baptiste\\AndroidStudioProjects\\CetoKids\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_cf96b338e373fd3e321214f242bade44a70ce0f2
 renamed.1=classes2.dex
 renamed.0=classes.dex
