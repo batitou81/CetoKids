@@ -436,8 +436,12 @@ public class RecetteActivity extends AppCompatActivity implements MyListRecetteA
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 
                 alertDialog.setTitle(getString(R.string.enregistrer_recette));
-                final EditText recetteName = new EditText(RecetteActivity.this);
-                alertDialog.setView(recetteName);
+				
+				View alertLayout = inflater.inflate(R.layout.layout_enregistrer_recette, null);		
+				final EditText recetteName = (EditText) alertLayout.findViewById(R.id.recetteNom);
+				final EditText recetteCommentaire = (EditText) alertLayout.findViewById(R.id.recetteCommentaire);	
+				
+                alertDialog.setView(alertLayout);
 
                 alertDialog.setPositiveButton(getString(R.string.sauvegarder), new DialogInterface.OnClickListener() {
 
@@ -466,7 +470,7 @@ public class RecetteActivity extends AppCompatActivity implements MyListRecetteA
                             Toast.makeText(getApplicationContext(),
                                     getString(R.string.enregistrement_impossible_nom_vide), Toast.LENGTH_SHORT).show();
                         } else {
-                            dbHelper.insertRecette(recetteName.getText().toString());
+                            dbHelper.insertRecette(recetteName.getText().toString(), recetteCommentaire.getText().toString());
                             int recette_id = dbHelper.getLastRecette();
                             for (Aliments aliment : items) {
                                 dbHelper.insertRecetteAliment(recette_id, aliment.getId(), aliment.getPortion());
