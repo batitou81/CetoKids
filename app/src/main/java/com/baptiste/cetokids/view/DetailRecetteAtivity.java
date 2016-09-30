@@ -26,12 +26,14 @@ public class DetailRecetteAtivity extends AppCompatActivity {
     private ArrayList<Aliments> alimentListeRecette;
     private String recette_nom;
     private int recette_id = 1;
-	private TextView nomRecette;
-	private TextView recetteProteine;
-	private TextView recetteGlucide;
-	private TextView recetteLipide;
-	private TextView recetteKcal;
-	private TextView recetteRatio;
+    private TextView nomRecette;
+    private TextView recetteProteine;
+    private TextView recetteGlucide;
+    private TextView recetteLipide;
+    private TextView recetteKcal;
+    private TextView recetteRatio;
+
+    private TextView recetteCommentaire;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,9 @@ public class DetailRecetteAtivity extends AppCompatActivity {
         recetteLipide = (TextView) findViewById(R.id.recetteLipide);
         recetteKcal = (TextView) findViewById(R.id.recetteKcal);
         recetteRatio = (TextView) findViewById(R.id.recetteRatio);
+        recetteCommentaire = (TextView) findViewById(R.id.recetteCommentaire);
+
+
         //nomRecette.setText(recette_nom);
 
         dbHelper = new CetoDBAdapter(getApplicationContext());
@@ -72,8 +77,8 @@ public class DetailRecetteAtivity extends AppCompatActivity {
 
             }
         });
-		
-		displayInfoRecette(recette_nom, recette_id);
+
+        displayInfoRecette(recette_nom, recette_id);
         displayListView(recette_id);
     }
 
@@ -84,27 +89,29 @@ public class DetailRecetteAtivity extends AppCompatActivity {
             dataAdapter.notifyDataSetChanged();
         }
     }
-	
-	private void displayInfoRecette(String recette_nom, int recette_id){
-		nomRecette.setText(recette_nom);
-		
-		 Cursor cursor = dbHelper.getRecetteById(recette_id);
+
+    private void displayInfoRecette(String recette_nom, int recette_id) {
+        nomRecette.setText(recette_nom);
+
+        Cursor cursor = dbHelper.getRecetteById(recette_id);
         cursor.moveToFirst();
-		
-		String proteine = cursor.getString(cursor.getColumnIndexOrThrow("proteine"));
-		String lipide = cursor.getString(cursor.getColumnIndexOrThrow("lipide"));
-		String glucide = cursor.getString(cursor.getColumnIndexOrThrow("glucide"));
-		String kcal = cursor.getString(cursor.getColumnIndexOrThrow("kcal"));
-		String ratio = cursor.getString(cursor.getColumnIndexOrThrow("ratio"));
-			
-		nomRecette.setText(recette_nom);
-		recetteProteine.setText(proteine);
-		recetteGlucide.setText(glucide);
-		recetteLipide.setText(lipide);
-		recetteKcal.setText(kcal);
-		recetteRatio.setText(ratio);		
-	}
-	
+
+        String proteine = cursor.getString(cursor.getColumnIndexOrThrow("proteine"));
+        String lipide = cursor.getString(cursor.getColumnIndexOrThrow("lipide"));
+        String glucide = cursor.getString(cursor.getColumnIndexOrThrow("glucide"));
+        String kcal = cursor.getString(cursor.getColumnIndexOrThrow("kcal"));
+        String ratio = cursor.getString(cursor.getColumnIndexOrThrow("ratio"));
+        String commentaire = cursor.getString(cursor.getColumnIndexOrThrow("recette_commentaire"));
+
+        nomRecette.setText(recette_nom);
+        recetteProteine.setText(proteine);
+        recetteGlucide.setText(glucide);
+        recetteLipide.setText(lipide);
+        recetteKcal.setText(kcal);
+        recetteRatio.setText(ratio);
+        recetteCommentaire.setText(commentaire);
+    }
+
     private void displayListView(int recette_id) {
 
 

@@ -20,7 +20,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "CETOKIDSDB";// Database name
     private SQLiteDatabase mDataBase;
     private final Context mContext;
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
 
 
     public DataBaseHelper(Context context) {
@@ -95,6 +95,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if (newVersion > oldVersion) {
 
+            db.execSQL(
+                    "ALTER TABLBE recettes add column recette_commentaire TEXT "
+            );
+        }
     }
+
+
 }

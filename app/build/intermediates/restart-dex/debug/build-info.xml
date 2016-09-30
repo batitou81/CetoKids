@@ -4,40 +4,47 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="11406313607234"
+    timestamp="21950557689458"
     token="-3753876152355029311"
-    verifier="FIELD_ADDED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="386" />
+        duration="473" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="359" />
     <task
         name="instant-run-transform"
-        duration="34" />
+        duration="37" />
     <task
         name="verifier"
-        duration="5" />
+        duration="8" />
 
     <artifact
-        location="C:\Users\Baptiste\AndroidStudioProjects\CetoKids\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
-        type="DEX" />
+        location="C:\Users\Baptiste\AndroidStudioProjects\CetoKids\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="10550271007751"
+        timestamp="20176201069357"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\Baptiste\AndroidStudioProjects\CetoKids\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="11406313607234"
-        verifier="FIELD_ADDED" >
+        timestamp="21854152487175"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Baptiste\AndroidStudioProjects\CetoKids\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_4\classes.dex"
+            location="C:\Users\Baptiste\AndroidStudioProjects\CetoKids\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="21950557689458"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\Baptiste\AndroidStudioProjects\CetoKids\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

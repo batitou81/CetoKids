@@ -27,7 +27,7 @@ public class MyListRecetteAdapater extends BaseAdapter implements ListAdapter {
     private Context context;
 
     private WeakReference<ListRecetteListener> listenerRef;
-
+    private int scrollStateFinal;
     private List<Aliments> items;
 
     public MyListRecetteAdapater(Context context, ListRecetteListener listener, List<Aliments> items) {
@@ -97,20 +97,29 @@ public class MyListRecetteAdapater extends BaseAdapter implements ListAdapter {
         gluPortionLabel.setText(round(item.getGlucide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
         lipPortionLabel.setText(round(item.getLipide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
         protPortionLabel.setText(round(item.getProteine() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
-portionEdit.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-    @Override
-    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-        item.setPortion(picker.getValue());
 
-        portionLabel.setText("Pour " + item.getPortion() + "g");
-        gluPortionLabel.setText(round(item.getGlucide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
-        lipPortionLabel.setText(round(item.getLipide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
-        protPortionLabel.setText(round(item.getProteine() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
 
-        ListRecetteListener listener = MyListRecetteAdapater.this.listenerRef.get();
-        listener.onRecetteChanged();
-    }
-});
+        scrollStateFinal = 0;
+        portionEdit.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                if (scrollStateFinal == 0) {
+
+
+                    item.setPortion(picker.getValue());
+
+                    portionLabel.setText("Pour " + item.getPortion() + "g");
+                    gluPortionLabel.setText(round(item.getGlucide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+                    lipPortionLabel.setText(round(item.getLipide() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+                    protPortionLabel.setText(round(item.getProteine() / (Float.parseFloat("100") / item.getPortion()), 2) + "");
+
+                    ListRecetteListener listener = MyListRecetteAdapater.this.listenerRef.get();
+                    listener.onRecetteChanged();
+
+                }
+            }
+        });
 
         portionEdit.setOnScrollListener(new NumberPicker.OnScrollListener() {
 
@@ -118,6 +127,9 @@ portionEdit.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
 
             @Override
             public void onScrollStateChange(NumberPicker numberPicker, int scrollState) {
+                scrollStateFinal = scrollState;
+
+
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
                     //We get the different between oldValue and the new value
                     int valueDiff = numberPicker.getValue() - oldValue;

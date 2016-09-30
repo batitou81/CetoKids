@@ -15,7 +15,7 @@ import java.util.List;
 public class CetoDBAdapter {
 
     private static final String DATABASE_NAME = "CETOKIDSDB";
-    private static final int DATABASE_VERSION = 11;
+    private static final int DATABASE_VERSION = 12;
     private static final String TABLE_NAME = "ALIMENTS";
     private static final String TITLE = "NoTitle";
     private static final String BODY = "NoBody";
@@ -26,6 +26,10 @@ public class CetoDBAdapter {
     private final Context mContext;
     private SQLiteDatabase mDb;
     private DataBaseHelper mDbHelper;
+
+
+
+
 
     public CetoDBAdapter(Context context) {
         this.mContext = context;
@@ -85,11 +89,9 @@ public class CetoDBAdapter {
         }
         return mCursor;
     }
-	
-    public Cursor getRecetteById(int recette_id) {	
 
-        Cursor mCursor = mDb.rawQuery("select _id, recette_nom, proteine, lipide, glucide, kcal, round(lipide/(proteine+glucide),1)||\":1\" ratio from (select r._id _id, r.recette_nom recette_nom, round(sum(a.proteine*rc.portion/100.0),1) proteine, round(sum(a.lipide*rc.portion/100.0),1) lipide, round(sum(a.glucide*rc.portion/100.0),1) glucide, round(sum(a.proteine*(rc.portion/100.0))*4+sum(a.lipide*rc.portion/100.0)*9+sum(a.glucide*rc.portion/100.0)*4,1) kcal from recette_aliment rc join aliments a on (rc.aliment_id = a._id)  join recettes r on (r._id = rc.recette_id) where r._id=? group by recette_nom);", new String[] { recette_id+"" });
-
+    public Cursor getRecetteById(int recette_id) {
+        Cursor mCursor = mDb.rawQuery("select _id, recette_nom, recette_commentaire, proteine, lipide, glucide, kcal, round(lipide/(proteine+glucide),1)||\":1\" ratio from (select r._id _id, r.recette_commentaire, r.recette_nom recette_nom, round(sum(a.proteine*rc.portion/100.0),1) proteine, round(sum(a.lipide*rc.portion/100.0),1) lipide, round(sum(a.glucide*rc.portion/100.0),1) glucide, round(sum(a.proteine*(rc.portion/100.0))*4+sum(a.lipide*rc.portion/100.0)*9+sum(a.glucide*rc.portion/100.0)*4,1) kcal from recette_aliment rc join aliments a on (rc.aliment_id = a._id)  join recettes r on (r._id = rc.recette_id) where r._id=? group by recette_nom);", new String[] { recette_id+"" });
         if (mCursor != null) {
             mCursor.moveToFirst();
         }
@@ -215,7 +217,7 @@ public class CetoDBAdapter {
     }
 
 
-	
+
     public Cursor fetchAlimentByCategorie(int cat_id) throws SQLException {
         Cursor mCursor = null;
        /* if (cat_id==null) {
@@ -300,7 +302,7 @@ public class CetoDBAdapter {
 
     public void insertRecette(String recette) {
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
-        String sql1 = "insert into recettes (recette_nom) values('" + recette.replace("'","''") + "');";
+        String sql1 = "insert into recettes (recette_nom,recette_commentaire) values('" + recette.replace("'","''") + "','TEST commentaire');";
         try {
             Log.i("sql1=", sql1);
             db.execSQL(sql1);

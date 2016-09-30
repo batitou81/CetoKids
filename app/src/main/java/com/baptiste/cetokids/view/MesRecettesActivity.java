@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 import com.baptiste.cetokids.data.CetoDBAdapter;
-import com.baptiste.cetokids.helper.Tools;
 import com.example.baptiste.myapplication.R;
 
 public class MesRecettesActivity extends BaseDrawerActivity {
@@ -54,36 +51,34 @@ public class MesRecettesActivity extends BaseDrawerActivity {
     protected int getLayoutId() {
         return R.layout.activity_mes_recette;
     }
-	
-	@Override
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.action_ajout_recette) {
-            startActivityForResult(RecetteActivity.creerRecette(this,0F,0F,0F),90);
+            startActivityForResult(RecetteActivity.creerRecette(this, 0F, 0F, 0F), 90);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == 90) {
-            Toast.makeText(getApplicationContext(),
-                  "Recette supprimée : " , Toast.LENGTH_SHORT).show();
 
             displayListView();
             dataAdapter.notifyDataSetChanged();
         }
     }
-	
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_mes_recettes, menu);
         return true;
     }
-	
+
     private void displayListView() {
 
 
@@ -136,14 +131,9 @@ public class MesRecettesActivity extends BaseDrawerActivity {
             public boolean onItemLongClick(AdapterView<?> arg0, View view,
                                            final int position, long arg3) {
 
-               AlertDialog.Builder alertDialog = new AlertDialog.Builder(MesRecettesActivity.this);
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MesRecettesActivity.this);
                 alertDialog.setTitle(getString(R.string.confirmation));
                 alertDialog.setMessage(getString(R.string.confirmation_suppression_recette));
-
-
-
-
-
 
 
                 alertDialog.setPositiveButton(getString(R.string.oui), new DialogInterface.OnClickListener() {
@@ -154,7 +144,7 @@ public class MesRecettesActivity extends BaseDrawerActivity {
                         try {
                             final Cursor cursor = (Cursor) listView.getItemAtPosition(position);
                             dbHelper.removeRcette(Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow("_id"))));
-                            Toast.makeText(getApplicationContext(), getString(R.string.supprimee) + " !" ,
+                            Toast.makeText(getApplicationContext(), getString(R.string.supprimee) + " !",
                                     Toast.LENGTH_SHORT).show();
                             displayListView();
 
