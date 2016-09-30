@@ -300,9 +300,9 @@ public class CetoDBAdapter {
     }
 
 
-    public void insertRecette(String recette) {
+    public void insertRecette(String recette, String commentaire) {
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
-        String sql1 = "insert into recettes (recette_nom,recette_commentaire) values('" + recette.replace("'","''") + "','TEST commentaire');";
+        String sql1 = "insert into recettes (recette_nom,recette_commentaire) values('" + recette.replace("'","''") + "','"+commentaire.replace("'","''")+"');";
         try {
             Log.i("sql1=", sql1);
             db.execSQL(sql1);
